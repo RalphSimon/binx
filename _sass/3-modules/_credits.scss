@@ -1,0 +1,46 @@
+.credits {
+  margin: 0;
+  position: relative;
+  background-image:url('../../img/Binx_wiegje-web.jpg');
+  // background-position: 65% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  img {
+    visibility: hidden;
+    width: 100%;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: em(85);
+    right: em(32);
+
+    @include media($medium-screen) {
+      bottom: em(250);
+    }
+  }
+
+  .credits__panel {
+    text-align: center;
+    color: #fff;
+    margin-bottom: em(16);
+
+    p {
+      margin-bottom: em(3);
+      font-size: .75em;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: .95em;
+    }
+
+    @include media($medium-screen) {
+      p, h2 {
+        font-size: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.site-footer {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  width: 100%;
+  background-color: $binx-pink-dark;
+  padding: em(16);
+  min-height: 150px;
+
+  @include media($medium-screen) {
+    padding: em(32);
+  }
+
+  .names,
+  .address,
+  .phone {
+    text-align: center;
+    margin-bottom: em(8);
+  }
+
+  .names {
+    color: $binx-yellow;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .address,
+  .phone a,
+  .phone span {
+    color: #fff;
+  }
+
+  .address {
+    font-style: normal;
+  }
+
+  .phone {
+    width: 100%;
+    height: 64px;
+    a {
+      display: inline-block;
+      padding: em(4);
+
+      &:hover {
+        border: 1px solid #fff;
+      }
+    }
+  }
+}

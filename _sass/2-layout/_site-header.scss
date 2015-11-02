@@ -1,0 +1,14 @@
+.site-header {
+  width: 100%;
+  height: em(500);
+  background-color: #C94398;
+  background-image: url('../../img/Binx-3-web.jpg');
+  background-position: 65% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include media($medium-screen) {
+    height: em(700);
+    background-position: 35% 0%;
+  }
+}

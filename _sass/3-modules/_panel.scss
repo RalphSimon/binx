@@ -1,0 +1,92 @@
+$binx-pink: #D930AC;
+$large-padding: em(16);
+
+%panel--text {
+  border: 1px solid $binx-pink;
+  padding: em(16);
+}
+
+.section-wrapper {
+
+  @include m(padding) {
+    padding: $large-padding;
+  }
+}
+
+
+.panel {
+  @include display(flex);
+  @include justify-content(space-around);
+  min-height: 300px;
+
+  @include e(message) {
+    @include span-columns(12);
+    @include align-self(center);
+    color: $binx-pink;
+    text-align: center;
+
+    @include media($medium-screen) {
+      @include span-columns(4);
+    }
+  }
+
+  @include m(text) {
+    @extend %panel--text;
+  }
+
+  @include m(image) {
+    // height: em(500);
+    // background-image: url('../../img/Binx-5-web.jpg');
+    // background-position: center center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.flex-column {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items(center);
+  width: 100%;
+}
+
+.panel__message--title {
+  // width: 100%;
+  text-align: justify;
+  color: $binx-pink;
+  margin-bottom: $large-padding * 2;
+
+  h1, h2 {
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 160px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  h2 {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include shift(0.5);
+    width: 350px;
+    height: 21px;
+  }
+
+  h2 span {
+    text-transform: uppercase;
+    font-size: 1.125em;
+    font-weight: 300;
+    margin: 0;
+  }
+}
